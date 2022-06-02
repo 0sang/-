@@ -1,0 +1,38 @@
+컴파일 예외 : JAVA(MVC)가 잡을 수 있음(IDE에서 빨간 줄)
+런타임 예외 : 개발자가 잡아야 함(try-catch
+  System.out.println(e.getMessage()); 또는 e.printStackTrace(); 를 사용하면 어떤 오류인지 알 수 있다) -> 어떤 에러가 발생했는지 로그를 남겨놓거나 db에 저장
+
+
+String: 클래스이기 때문에 메소드가 존재(
+ ex) string.legnth -> string 이 null일 경우 값이 없음(NullPointerException)
+
+class 총(){
+	void shoot(){
+		system.out.println(“총을 발사했습니다”);
+	}
+}
+
+총 s = new 총();
+s.shoot(); -> 총을 발사했습니다
+
+총 s = null;
+s.shoot() -> NullPointerException
+ 
+이 경우 try-catch
+
+총 s = null;
+try{
+  s.shoot();
+} catch(RuntimeException e){
+  System.out.println(“총이 없어서 총을 만들고 다시 실행합니다.”);
+	s = new 총();
+	s.shoot();
+}
+
+로 예외처리 가능
+
+try-catch 작성 시
+컴파일 예외(부모) -> Exception
+런타임 예외(부모) -> RuntimeException
+
+출처 데어자바 65강 : 컴파일예외 런타임예외
