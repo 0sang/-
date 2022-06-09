@@ -1,0 +1,29 @@
+1. 리액트는 하나의 태그만 리턴(return시 하나의 dom만) / 하나의 리턴태그에 다 넣어야 함
+
+2. 변수 선언은 let or const(var는 scope가 전역으로 설정되어 불편함)
+
+3. return문 안에 js변수 a를 쓰려면 중괄호 안에, {a} <- 써야함
+
+4. if문 사용이 불가능 -> 삼항연산자 
+let a = 10;
+    조건      TRUE          FALSE
+(a === 10?'a는 10입니다':'a는 10이 아닙니다');
+
+5. 조건부 랜더링
+const b = 20;
+{b === 20&&'b는 20입니다.'} // false면 출력 X
+
+6. return문이 한 줄이면 괄호 ()가 필요 X, 다중이면 자동으로 생성
+
+7. 선언만 하고 초기화하지 않으면 (let c;) -> undefined로 정의됨(let d = undefined;)
+
+8. CSS디자인
+ - 내부에 적는 방법 : 추천하지 않음
+
+ - 외부 파일에 적는 방법 : App.css에
+    .box-style{
+      color: blue;
+    },
+태그에 <div className="box-style"></div>
+
+ - 라이브러리 사용(부트스트랩, component-styled)
