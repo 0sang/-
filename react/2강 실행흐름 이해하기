@@ -1,0 +1,12 @@
+리액트 엔진 - 데이터 변경 감지 - UI를 그려준다
+
+index.html - SPA(Single Page Application): 리액트에서 페이지 이동이란 바디의 내용을 바꾸는 것
+
+pakage.json 에 script를 보면 "start": "react-scripts start" <- npm start,
+
+npm start -> index.js,
+
+ReactDom.rander(
+  <App /> //2. JSX문법
+  document.getElementById('root') // public/index.html 파일의 root 를 찾아 <App />에 집어넣는다. 결국 index.html이 열림
+);
