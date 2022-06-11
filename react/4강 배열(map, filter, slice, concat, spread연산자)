@@ -1,0 +1,28 @@
+1. 컴포넌트화
+ 한 리턴문 안에서 나무를 포함하는 해 배경이 있는데, 해를 달로 바꾸고 싶다.
+ 이 때 해와 나무를 각각 리턴할 수 있게 컴포넌트화 한다.
+ 컴포넌트화를 하면 나무가 해 배경에 포함되어 있어도 리턴을 실행할지 말지 정할 수 있다. 이것이 컴포넌트화의 장점이다.
+ 
+2. 리액트 엔진
+ 부모가 그려지면 자식도 다시 그려야하는지 연산하는 것
+ 
+ spred(전개)연산자
+   const a = [1,2,3];
+   const b = [...a]; 
+   b.push(4); //b 데이터 변경
+   console.log(a); // 1,2,3
+   console.log(b); // 1,2,3,4
+   
+concat
+  const a2 = [1,2,3];
+  const b2 = a2.concat(4); // a2.push를 하면 a2의 값이 바뀜, concat은 X
+  console.log(a2); // 1,2,3
+  console.log(b2); // 1,2,3,4
+  
+filter
+  const a3 = [1,2,3];
+  const b3 = a3.filter((n) => {return n != 1}); // boolean값을 리턴받음 -> true만 걸러낸다
+  console.log(b3); // 2,3
+  
+ 
+이어서 
